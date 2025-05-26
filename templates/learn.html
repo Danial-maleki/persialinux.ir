@@ -1,0 +1,35 @@
+{% extends '_base.html'%}
+
+
+{% block title%} Aparat {% endblock title%}
+
+{% block content %}
+<div class="container mt-4 text-center">
+    <h1>
+        <div class="card text-bg-dark">
+            <img  class="" src="data:image/png;base64,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" alt=""><button href="https://discord.gg/JRfUqqASCu" role="" class="card-link"></button>
+            <div class="card-img-overlay">
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            
+            
+                <a href="https://www.aparat.com/MR.SIX6" class="card-link">Aparat</a>
+                <!-- <a href="#" class="card-link">Another link</a>  -->
+            </div>
+          </div>
+    </h1>
+</div>
+{% endblock content%}
+<img src="https://www.kapwing.com/resources/content/images/2021/10/discord-halloween-pfp-cover.gif" class="active link" alt="..."><link rel="stylesheet" href="">
+<button>   </button>

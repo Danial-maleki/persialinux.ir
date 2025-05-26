@@ -1,0 +1,20 @@
+{% extends '_base.html'%}
+
+
+{% block title%} Edit Rank {{book.title}} {{book.title}} {% endblock title%}
+
+{% block content %}
+<br>
+<br>
+<div class="container">
+    <form action="" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <table>
+        {{form.as_table}}
+        </table>
+        <input type="submit" value="Save">
+    </form>
+</div>
+
+
+{% endblock content%}

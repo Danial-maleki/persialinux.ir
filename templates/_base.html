@@ -1,0 +1,173 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href='{% static "css/home.css" %}'>
+    <link  rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"  />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.rtl.min.css" integrity="sha384-OXTEbYDqaX2ZY/BOaZV/yFGChYHtrXH2nyXJ372n2Y8abBhrqacCEe+3qhSHtLjy" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+    <title>{% block title%}{% endblock title%}</title>
+</head>
+<body>
+<!-- -----------------------------------------------------بخش اینفو-------------------------------------------- -->
+    {% comment %} <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-primary"> {% endcomment %}
+      <header class="header">
+        <ul class="header__main">
+            <li class="header__main-home">
+                <a class=''header__main-btn href="{% url 'home' %}">خانه</a>
+            </li>
+            <li class="header__main-os">
+                <a class=''header__main-btn href="{% url 'discord' %}">سیستم عامل</a>
+            </li>
+            <li class="header__main-lern">
+            <a class=''header__main-btn href="{% url "learn" %}">آموزش</a>
+          </li>
+          <li class="header__main-news">
+            <a class=''header__main-btn href="{% url "news" %}">اخبار</a>
+          </li>
+          </ul>
+          
+             
+              <li class="header__main-os">
+                  <a class=''header__main-btn href="{% url "aboutus" %}">درباره ما</a>
+              </li>
+              <li class="header__main-os">
+                  <a class=''header__main-btn href="{% url "chat" %}">گفتگو</a>
+              </li>
+              <li class="header__main-os">
+                  <a class=''header__main-btn href="{% url "wikilinux" %}">ویکی لینوکس</a>
+              </li>
+            <li class="header__main-login">
+                <a class="header__enter-btn" href="{% url "login" %}">ورود</a>
+            </li>
+            <li class="header__main-register">
+                <a class="header__enter-btn" href="{% url "signup" %}">ثبت نام</a>
+            </li>
+          </ul>
+        </header>
+        <main>
+          <img class="main__img" src="assets/img/background.png" alt="">
+          <img class="main__computer-img" src="assets/img/computer.png" alt="">
+          <a class="main__btn-news" href="">خبر</a>
+          <a class="main__btn-learn" href="">آموزش</a>
+        </main>
+        {% comment %} <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <a href="{% url 'info' %}"><img class="logo" src="{% static 'image/information_77957.png' %}" alt="" style="width:40px ; height: 40px;"></a>
+          </a>
+
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              
+              <li class="nav-item ms-3">
+                <a class="nav-link active" aria-current="page" href="{% url 'home' %}"><img src="{% static 'image/3668851-facilities-flat-home-house_108007.png' %}" alt="" style="width:40px ; height: 40px;"></a>
+                
+              </li>
+              <li class="nav-item ms-3">
+                <a class="nav-link active" aria-current="page" href="{% url 'book_list' %}"><img src="{% static 'image/3440920-bag-basket-cart-ecommerce-shop-shopping-store_107540.png' %}" alt="" style="width:40px ; height: 40px;"></a>
+                
+              </li>
+
+              <li class="nav-item ms-3">
+                <a class="nav-link active" aria-current="page" href="{% url 'discord' %}"><img src="{% static 'image/discordcanary_94568.png' %}" alt="" style="width:40px ; height: 40px;"></a>
+                
+              </li>
+                <li class="nav-item ms-3">
+                <a class="nav-link active" aria-current="page" href="{% url 'contactus' %}"><img src="{% static 'image/About_Us-80_icon-icons.com_57384.png' %}" alt="" style="width:40px ; height: 40px;"></a>
+                
+              </li>
+                <li class="nav-item ms-3">
+                <a class="nav-link active" aria-current="page" href="{% url 'aboutus' %}"><img src="{% static 'image/483486-contact-email-envelope-letter_107696.png' %}" alt="" style="width:40px ; height: 40px;"></a>
+                
+              </li>
+                <li class="nav-item ms-3">
+                <a class="nav-link active" aria-current="page" href="{% url 'aparat' %}"><img src="{% static 'image/aparat_logo_icon_247584.png' %}" alt="" style="width:40px ; height: 40px;"></a>
+                
+              </li> {% endcomment %}
+              {% comment %} {%if user.is_authenticated%}
+              <li class="nav-item"><a class="nav-link " href="{% url 'book_create' %}"><img src="{% static 'image/1486485586-add-document-contract-agreement-notic-file-plus_81158.png' %}" alt="" style="width:40px ; height: 40px;"></a></li> {% endcomment %}
+
+              {% comment %} {%endif%} {% endcomment %}
+              
+              {% comment %} <li class="nav-item"><a class="nav-link " href="{% url 'book_create' %}"><img src="https://cdn.icon-icons.com/icons2/624/PNG/512/About_Us-80_icon-icons.com_57384.png" alt="" style="width:40px ; height: 400px;"></a></li>
+              <li class="nav-item"><a class="nav-link " href="{% url 'book_create' %}"><img src="https://cdn.icon-icons.com/icons2/1571/PNG/512/483486-contact-email-envelope-letter_107696.png" alt="" style="width:40px ; height: 40px;"></a></li> {% endcomment %}
+<!-- -----------------------------------------------بخش رنک ها---------------------------------------------------------------- -->
+              {% comment %} <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Vortex Ranks
+                </a> {% endcomment %}
+                {% comment %} <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Server Rank</a></li>
+                  <li><a class="dropdown-item" href="#">RankUs</a></li>
+                  <div class="modal-dialog modal-xl">hgjghjghj</div>
+                  <div class="modal-dialog modal-lg">cvbcvb</div>
+                  <div class="modal-dialog modal-sm">vcbcvbcvb</div>
+                  <div class="clearfix">kos</div>
+                  <span class="border">dfsdfsdfsdf</span>
+                  <span class="border-top">asdasdas</span>
+                  
+                  <li><hr class="dropdown-divider">یبلیبل</li>
+                  <li><a class="dropdown-item" href="#">یبلیبلیب</a></li>
+                  <li><a class="dropdown-item" href="#">لیبلیبلیبل</a></li>
+                </ul> {% endcomment %}
+<!-- -------------------------------------------------------------در باره ما-------------------------------------------------------------------------- -->
+{% comment %} </li>
+
+</ul>
+
+<!-- --------------------------------------------------------------ارتباط با ما--------------------------------------------------------------- -->
+<!-- -------------------------------------------------------------------discord-------------------------------------------------------------------------------------- -->
+<!-- -----------------------------------------------------------------نشان دهنده عکس ایتم کنار لوگین------------------------------------- -->
+            <a href="">
+                <span class="me-5 fs-4 navbar-text">
+                    <i class="bi bi-cart3">Danial</i>
+                    <!-- <img src="https://img.icons8.com/carbon-copy/100/000000/shopping-cart.png" style="width:30%"/> -->
+                </span>
+<!-- -----------------------------------------------------------بخش لوگیم و  لاگ-------------------------------------------------------            -->
+            </a>
+            {% if user.is_authenticated %}
+            <span class="navbar-text me-2 ">Welcome | {{user.username}}</span>
+            <span class="me-2">|</span>
+            <a href="{% url 'logout' %}" class="text-decoration-none"><span class="navbar-text me-5 "><img src="{% static 'image/logouthousesymbolwitharrowpointingouttoright_79910.png' %}" alt="" style="width:40px ; height: 40px;"></span></a>
+            {% else %}
+            <a href="{% url 'signup' %}" class="text-decoration-none">
+              <span class="navbar-text me-2 ">
+                <img src="{% static 'image/businessregistration_signpen_negocio_inscripcio_2358.png' %}" alt="" style="width:40px ; height: 40px;">
+              </span>
+              <span class="me-2 text-secondary">
+                |
+              </span>
+              <a href="{% url 'login' %}" class="text-decoration-none">
+                <span class="navbar-text me-5 ">
+                  <img src="{% static 'image/Login_37128.png' %}" alt="" style="width:40px ; height: 40px;">
+                </span>
+                
+              </a>
+              {% endif %} {% endcomment %}
+          </div>
+        </div>
+        
+      </nav>
+
+
+
+
+    
+    
+    <!-- <a class="menu" href="{% url 'home'%}" >صفحه اصلی</a>
+    <a class="menu" href="{% url 'book_list'%}" >نمایش محصولات</a>
+    <a class="menu" href="{% url 'book_create' %}" >ایجاد کتاب جدید</a> -->
+    {% block content %}
+
+    {% endblock content%}
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+
+</body>
+</html>
