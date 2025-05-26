@@ -176,5 +176,6 @@
 ---
 
 **تهیه شده توسط: دانیال ملکی**
+https://github.com/Danial-maleki/copyright/blob/main/COPYRIGHT.md
 
 ---
