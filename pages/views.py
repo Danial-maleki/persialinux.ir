@@ -9,6 +9,31 @@ from django.contrib.auth import logout
 # ==============================
 from django.conf import settings
 from django.shortcuts import redirect
+tutorials = [
+    {
+        "title": "نصب اوبونتو",
+        "description": "آموزش قدم به قدم نصب سیستم عامل اوبونتو.",
+        "image_url": "https://assets.ubuntu.com/v1/29985a98-ubuntu-logo32.png",
+        "download_link": "/files/ubuntu_install_guide.pdf",
+        "video_link": "https://www.aparat.com/v/abc123"
+    },
+    {
+        "title": "کار با ترمینال",
+        "description": "مبانی استفاده از ترمینال در لینوکس برای مبتدیان.",
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Bash_Logo_Colored.svg/1200px-Bash_Logo_Colored.svg.png",
+        "download_link": None,
+        "video_link": "https://www.aparat.com/v/def456"
+    },
+    {
+        "title": "دستورهای پایه لینوکس",
+        "description": "لیست مهم‌ترین دستورهای لینوکس با مثال.",
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/3/35/Tux.svg",
+        "download_link": "/files/linux_commands_cheatsheet.pdf",
+        "video_link": None
+    }
+]
+
+
 LINUX_DISTROS = {
     "ubuntu": {
         "name": "Ubuntu",

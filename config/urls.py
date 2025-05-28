@@ -24,10 +24,11 @@ from django.contrib.auth import views as auth_views
 urlpatterns = [
     path('myadmin/', admin.site.urls),
     path('' , include('pages.urls')),
-    path('books/' , include('books.urls')),
     path('accounts/' , include('django.contrib.auth.urls')),
     path('accounts/' , include('pages.urls')),
-     path('login/', auth_views.LoginView.as_view(template_name='registration/login.html'), name='login'),
+    path('login/', auth_views.LoginView.as_view(template_name='registration/login.html'), name='login'),
+    path('admin/', admin.site.urls),
+    path('', include('core.urls')),  # مسیر اپ جدید
 
 ] + static(settings.MEDIA_URL , document_root=settings.MEDIA_ROOT)
 
