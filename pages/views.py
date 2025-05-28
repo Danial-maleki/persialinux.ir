@@ -3,10 +3,16 @@ from django.views.generic import TemplateView
 from django.views import generic
 from django.contrib.auth.forms import UserCreationForm
 from django.urls import reverse_lazy
+from django.contrib.auth import logout
+
 
 # ==============================
 from django.conf import settings
 from django.shortcuts import redirect
+
+def logout_view(request):
+    logout(request)
+    return redirect('login')
 
 
 def error_404_view(request, exception):

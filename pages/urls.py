@@ -13,4 +13,5 @@ urlpatterns=[
     path("wikilinux/" , views.Wikilinux.as_view() , name = 'wikilinux'),
     path("news/" , views.News.as_view() , name = 'news'),
     path('signup/' , views.SignupView.as_view() ,  name = 'signup'),
+    path('logout/', views.logout_view, name='logout'),
 ]

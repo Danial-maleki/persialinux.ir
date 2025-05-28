@@ -1,4 +1,33 @@
+
 {% extends '_base.html' %} 
+{% load crispy_forms_tags %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+<div class="d-flex justify-content-center align-items-center mt-5" dir="ltr">
+    <div class="col-12 col-sm-8 col-md-6 col-lg-4 bg-white border rounded-4 shadow p-4">
+        <form method="post">
+            {% csrf_token %}
+            <h3 class="text-center mb-4 fw-bold text-primary">Persialinux</h3>
+            {{ form}}
+            
+            <button type="submit" class="btn btn-success w-100 mt-3">ورود</button>
+            
+            <div class="text-center my-3 position-relative">
+                <hr>
+                <span class="position-absolute top-50 start-50 translate-middle px-2 bg-white text-muted">یا</span>
+            </div>
+        </form>
+        
+        <a href="{% url 'signup' %}" class="btn btn-outline-primary w-100 mb-2">ثبت‌نام</a>
+        <div class="text-center">
+            <a class="text-decoration-none text-secondary" href="{% url 'password_reset' %}">فراموشی رمز عبور؟</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
+{% comment %} {% extends '_base.html' %} 
 {% load crispy_forms_tags %}
 
 
@@ -26,4 +55,4 @@
     </div>
 
 </div>
-{% endblock %}
+{% endblock %} {% endcomment %}
