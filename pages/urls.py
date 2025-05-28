@@ -4,7 +4,7 @@ from . import views
 
 urlpatterns=[
     path("" , views.Home.as_view() , name = 'home'),
-    path("Os/" , views.Os.as_view() , name = 'discord'),
+    path("Os/" , views.Os.as_view() , name = 'os'),
     path("contactus/" , views.Contactus.as_view() , name = 'contactus'),
     path("aboutus/" , views.Aboutus.as_view() , name = 'aboutus'),
     path("info/" , views.Info.as_view() , name = 'info'),
@@ -14,4 +14,6 @@ urlpatterns=[
     path("news/" , views.News.as_view() , name = 'news'),
     path('signup/' , views.SignupView.as_view() ,  name = 'signup'),
     path('logout/', views.logout_view, name='logout'),
+    path('linux/', views.linux_list, name='linux_list'),
+    path('linux/<str:distro>/', views.linux_detail, name='linux_detail'),
 ]
