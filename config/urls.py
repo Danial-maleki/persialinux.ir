@@ -28,7 +28,7 @@ urlpatterns = [
     path('accounts/' , include('pages.urls')),
     path('login/', auth_views.LoginView.as_view(template_name='registration/login.html'), name='login'),
     path('admin/', admin.site.urls),
-    path('', include('core.urls')),  # مسیر اپ جدید
+    path('', include('Adminpanel.urls')),  # مسیر اپ جدید
 
 ] + static(settings.MEDIA_URL , document_root=settings.MEDIA_ROOT)
 

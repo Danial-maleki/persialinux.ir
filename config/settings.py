@@ -37,7 +37,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'core',
+    'Adminpanel',
+
+
+
     'pages',
     'crispy_forms',
    
@@ -73,7 +76,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'config.wsgi.application'
-AUTH_USER_MODEL = 'core.User'
+#AUTH_USER_MODEL = 'core.User'
 
 
 # Database
@@ -135,7 +138,7 @@ STATICFILES_DIRS=[BASE_DIR /'static']
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 
-LOGIN_REDIRECT_URL='book_list'
+LOGIN_REDIRECT_URL='adminlist'
 LOGOUT_REDIRECT_URL='home'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap5'
